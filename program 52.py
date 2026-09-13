@@ -1,0 +1,20 @@
+n = int(input("Enter a number: "))
+
+seen = set()
+
+while n != 1 and n not in seen:
+    seen.add(n)
+
+    sum = 0
+
+    while n > 0:
+        digit = n % 10
+        sum = sum + digit * digit
+        n = n // 10
+
+    n = sum
+
+if n == 1:
+    print("Happy Number")
+else:
+    print("Not a Happy Number")
